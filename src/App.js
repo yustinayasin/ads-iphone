@@ -35,7 +35,6 @@ export default function App() {
                         scale={15}
                         color="black"
                         position={[-1.5, 1.5, -1]}
-                        className="first"
                     >
                         PRO
                     </Text>
@@ -44,9 +43,28 @@ export default function App() {
                         scale={15}
                         color="black"
                         position={[3, -1.8, -1]}
-                        className="first"
                     >
                         BEYOND
+                    </Text>
+                </group>
+
+                <group>
+                    <Text
+                        scale={4}
+                        color="black"
+                        position={[-2, -9.5, -1]}
+                        maxWidth={1}
+                    >
+                        Surgical-grade stainless steel.
+                    </Text>
+
+                    <Text
+                        scale={4}
+                        color="black"
+                        position={[2.8, -6, -1]}
+                        maxWidth={0.7}
+                    >
+                        6.1'' and 6.7'' display sizes.
                     </Text>
 
                 </group>
@@ -105,15 +123,14 @@ export default function App() {
 
             </Scroll>
 
-            <Scroll html>
+            {/* <Scroll html>
                 <div ref={second}>
                     <div style={{ position: "absolute", top: '60vh', left: '8em' }}></div>
                     <div style={{ position: "absolute", top: '30vh', left: '18em' }}></div>
                     <h1 style={{ top: '160vh', left: '5em' }}>Surgical-grade <br /> stainless steel.</h1>
                     <h1 style={{ top: '134vh', left: '17em' }}>6.1'' and 6.7'' <br /> display sizes.</h1>
                 </div>
-
-            </Scroll>
+            </Scroll> */}
         </>
     )
 }
