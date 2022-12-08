@@ -1,0 +1,107 @@
+html,
+body,
+#root
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: inter;
+    color: black;
+    background: rgb(231, 226, 226);
+    overscroll-behavior: none;
+}
+
+h1 {
+    position: absolute;
+    font-family: 'Inter var', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    /* letter-spacing: -0.05em; */
+    /* line-height: 0.7em; */
+    margin: 0;
+    padding: 0;
+    width: 300px;
+}
+
+.first {
+    transition: opacity 0.5s cubic-bezier(0.61, 1, 0.88, 1);
+    opacity: 1;
+}
+
+.first.hidden {
+    opacity: 0;
+}
+
+.first > *:nth-child(1) {
+    transition-delay: 0s;
+    transform: matrix(1, 0, 0, 1, 0, 36);
+}
+
+.first > *:nth-child(2) {
+    transition-delay: 0.1s;
+    transform: matrix(1, 0, 0, 1, 0, 119);
+}
+
+.first > * {
+    transition: transform 0.5s cubic-bezier(0.61, 1, 0.88, 1);
+}
+
+.first.hidden > * {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.second {
+    transition: opacity 0.5s cubic-bezier(0.61, 1, 0.88, 1);
+    opacity: 0;
+}
+  
+.second.show {
+    opacity: 1;
+}
+  
+.second > *:nth-child(1) {
+    transition-delay: 0s;
+    transform: matrix(1, 0, 0, 1, 0, 36);
+}
+  
+.second > *:nth-child(2) {
+    transition-delay: 0.1s;
+    transform: matrix(1, 0, 0, 1, 0, 119);
+}
+  
+.second > *:nth-child(3) {
+    transition-delay: 0.2s;
+    transform: matrix(1, 0, 0, 1, 0, 78);
+}
+  
+.second > * {
+    transition: transform 0.5s cubic-bezier(0.61, 1, 0.88, 1);
+}
+  
+.second.show > * {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+  
+.second > div {
+    padding-top: 0.5em;
+    position: absolute;
+    width: auto;
+}
+  
+.second > div::after {
+    transition: width 0.7s cubic-bezier(0.61, 1, 0.88, 1);
+    content: '';
+    width: 0vw;
+    height: 4px;
+    background: black;
+}
+  
+.second.show > div::after {
+    width: 3.5vw;
+}
+  
